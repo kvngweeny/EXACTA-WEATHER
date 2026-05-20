@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EXACTA WEATHER</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="video/weather-bg.MP4" type="video/mp4" />
+    </video>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- LEFT PANEL -->
+      <div class="left-panel">
+        <div class="logo">
+          <h1>EXACTA WEATHER</h1>
+        </div>
+
+        <div class="current-weather">
+          <div class="temp" id="temperature">--°C</div>
+
+          <div class="weather-info">
+            <h2 id="weather">Loading...</h2>
+            <p id="date">----</p>
+            <p id="location">
+              <i class="fa-solid fa-location-dot"></i>
+              --
+            </p>
+          </div>
+        </div>
+
+        <!-- Forecast -->
+        <div class="forecast">
+          <h2>5 Days Forecast</h2>
+          <div id="forecast-container"></div>
+        </div>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="right-panel">
+        <!-- Search -->
+        <div class="search-box">
+          <input
+            type="text"
+            id="city-input"
+            placeholder="Search city, state or country..."
+          />
+          <button id="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <!-- Highlights -->
+        <div class="highlights">
+          <h2>Today's Highlights</h2>
+
+          <div class="cards">
+            <div class="card">
+              <h3>Humidity</h3>
+              <p id="humidity">--%</p>
+            </div>
+
+            <div class="card">
+              <h3>Wind Speed</h3>
+              <p id="wind">-- km/h</p>
+            </div>
+
+            <div class="card">
+              <h3>Pressure</h3>
+              <p id="pressure">-- hPa</p>
+            </div>
+
+            <div class="card">
+              <h3>Feels Like</h3>
+              <p id="feels-like">--°C</p>
+            </div>
+
+            <div class="card">
+              <h3>Sunrise</h3>
+              <p id="sunrise">--</p>
+            </div>
+
+            <div class="card">
+              <h3>Sunset</h3>
+              <p id="sunset">--</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
